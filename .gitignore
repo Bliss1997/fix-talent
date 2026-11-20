@@ -1,0 +1,21 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+.next/
+dist/
+build/
+.tmp/
+.cache/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Uploaded files (candidate CVs are personal data)
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep

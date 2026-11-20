@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>FIX Talent – Mint Demo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#0B4A42;--mint:#2FCFA3;--mint2:#8FE8CC;--light:#E7F8F2;--ink:#12211E;--grey:#5B6B67}
+*{box-sizing:border-box}body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,.lg{font-family:Sora,sans-serif}a{color:inherit;text-decoration:none}
+.c{max-width:1160px;margin:auto;padding:0 28px}
+.top{background:var(--deep);color:#fff;font-size:13px;padding:8px 0}.top .c{display:flex;justify-content:space-between}
+header{background:#fff;border-bottom:1px solid #e5eeeb;position:sticky;top:0;z-index:5}
+header .c{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--deep)}.lg{font-weight:700;font-size:24px;line-height:1}.lg i{font-style:normal;font-weight:500}
+.logo small{display:block;font:500 10.5px 'DM Sans';color:var(--grey);margin-top:4px;letter-spacing:.01em}
+nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-weight:500}nav li:hover{color:#16a07c}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;font-size:15px}
+.m{background:var(--mint);color:var(--deep)}.d{background:var(--deep);color:#fff}.o{border:2px solid #fff;color:#fff}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.half{padding:70px 60px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;overflow:hidden}
+.half h2{font-size:38px;line-height:1.15;margin:0 0 14px}.half p{font-size:17px;line-height:1.55;max-width:420px;margin:0 0 28px}
+.h1{background:linear-gradient(135deg,#0B4A42,#116B5C);color:#fff}.h2{background:var(--light)}
+.half::after{content:"";position:absolute;right:-70px;bottom:-70px;width:260px;height:260px;border-radius:50%;opacity:.5}
+.h1::after{background:var(--mint)}.h2::after{background:var(--mint2)}
+.eyebrow{font-weight:600;color:var(--mint);text-transform:uppercase;letter-spacing:.1em;font-size:13px;margin-bottom:12px}.h2 .eyebrow{color:#16a07c}
+.intro{text-align:center;padding:80px 0 40px}.intro h2{font-size:34px;max-width:760px;margin:0 auto 14px}.intro p{color:var(--grey);font-size:18px;max-width:700px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;margin:30px 0 70px}
+.stats b{font:700 46px Sora;color:#16a07c;display:block}.stats span{color:var(--grey)}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border-radius:22px;background:var(--light);padding:34px;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #0b4a4222}
+.ico{width:54px;height:54px;border-radius:16px;background:var(--mint);display:grid;place-items:center;margin-bottom:18px}
+.card h3{margin:0 0 8px;font-size:21px}.card p{color:var(--grey);line-height:1.55;margin:0 0 16px}.card a{font-weight:600;color:var(--deep)}
+section{padding:70px 0}.sh{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.sh h2{font-size:32px;margin:0}
+.spec{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sp{border:1px solid #d9e8e3;border-radius:18px;padding:24px}.sp:hover{border-color:var(--mint);background:var(--light)}
+.sp h3{font-size:17px;margin:0 0 6px}.sp p{margin:0;color:var(--grey);font-size:14.5px;line-height:1.5}
+.ins{background:var(--deep);color:#fff}.ins .g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ib{background:#ffffff12;border-radius:20px;padding:28px}.ib .t{color:var(--mint);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+.ib h3{margin:10px 0;font-size:20px}.ib p{opacity:.8;line-height:1.5;margin:0 0 14px}
+.cta{background:var(--mint);border-radius:30px;padding:56px;display:flex;justify-content:space-between;align-items:center;gap:30px;color:var(--deep)}
+.cta h2{margin:0 0 6px;font-size:32px}.cta p{margin:0;font-size:17px}
+footer{background:var(--ink);color:#cfe0db;padding:50px 0 30px;font-size:14px}
+footer .g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}footer h4{color:#fff;margin:0 0 12px;font-family:Sora}footer li{list-style:none;margin-bottom:8px}footer ul{padding:0;margin:0}
+.copy{border-top:1px solid #ffffff22;margin-top:30px;padding-top:18px}
+@media(max-width:860px){.hero,.svc,.spec,.ins .g,.stats,footer .g{grid-template-columns:1fr}nav ul{display:none}.cta{flex-direction:column;text-align:center}.half{padding:50px 28px}}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="ic" viewBox="0 0 64 64"><circle cx="32" cy="12" r="9" fill="#2FCFA3"/><path d="M8 62V50a24 24 0 0 1 48 0v12z" fill="#0B4A42"/><path d="M26 56V40M26 40h16M26 49h11" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none"/></symbol>
+<symbol id="icw" viewBox="0 0 64 64"><circle cx="32" cy="12" r="9" fill="#2FCFA3"/><path d="M8 62V50a24 24 0 0 1 48 0v12z" fill="#fff"/><path d="M26 56V40M26 40h16M26 49h11" stroke="#0B4A42" stroke-width="6" stroke-linecap="round" fill="none"/></symbol>
+</defs></svg>
+
+<div class="top"><div class="c"><span>Where great people meet great work.</span><span>Ho Chi Minh City · Ha Noi · Da Nang &nbsp;|&nbsp; EN / VI</span></div></div>
+<header><div class="c">
+<a class="logo" href="#"><svg width="46" height="46"><use href="#ic"/></svg><div><div class="lg">FIX <i>Talent</i></div><small>Where great people meet great work.</small></div></a>
+<nav><ul><li>Job seekers</li><li>Employers</li><li>Services</li><li>Insights</li><li>About us</li></ul></nav>
+<a class="btn d" href="#">Contact us</a></div></header>
+
+<div class="hero">
+<div class="half h1"><div class="eyebrow">Job seekers</div><h2>Seeking a new role?</h2><p>Begin the journey to your next job today. Browse roles from companies we know and trust.</p><a class="btn m" href="#">Find a job</a></div>
+<div class="half h2"><div class="eyebrow">Employers</div><h2>Looking for talent?</h2><p>Tell us the role. We send you a shortlist of vetted candidates in days, not weeks.</p><a class="btn d" href="#">Hire with us</a></div>
+</div>
+
+<div class="c"><div class="intro"><h2>Delivering great results and a smooth experience for people and companies</h2><p>We connect skilled professionals with teams that value them, across Vietnam.</p></div>
+<div class="stats"><div><b>12,000+</b><span>candidates placed</span></div><div><b>480+</b><span>partner companies</span></div><div><b>14 days</b><span>average time to hire</span></div><div><b>3</b><span>major cities</span></div></div></div>
+
+<div class="c"><div class="svc">
+<div class="card"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B4A42" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 11l2 2 4-4"/></svg></div><h3>Recruitment</h3><p>Permanent hiring for professional and managerial roles, with candidates matched on skills and culture.</p><a href="#">Learn more →</a></div>
+<div class="card"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B4A42" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V4h8v3"/></svg></div><h3>Staffing</h3><p>Temporary and contract workers, ready fast, so your team scales up and down with demand.</p><a href="#">Learn more →</a></div>
+<div class="card"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B4A42" stroke-width="2.2" stroke-linecap="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>HR Solutions</h3><p>Payroll, outsourcing and workforce consulting that remove admin work and cut hiring risk.</p><a href="#">Learn more →</a></div>
+</div></div>
+
+<section><div class="c"><div class="sh"><h2>Our specialisations</h2><a class="btn d" href="#">All industries</a></div>
+<div class="spec">
+<div class="sp"><h3>IT & Telecommunications</h3><p>Software development, infrastructure and IT services.</p></div>
+<div class="sp"><h3>Banking & Financial Services</h3><p>Fintech, corporate banking, insurance and asset management.</p></div>
+<div class="sp"><h3>Industrial & Logistics</h3><p>Production engineering, supply chain and logistics.</p></div>
+<div class="sp"><h3>Consumer Goods & Healthcare</h3><p>Product development, sales and healthcare solutions.</p></div>
+<div class="sp"><h3>Real Estate & Hospitality</h3><p>Property, construction projects and hospitality operations.</p></div>
+<div class="sp"><h3>Corporate & Professional Services</h3><p>Consulting, legal, advisory and governance.</p></div>
+</div></div></section>
+
+<section class="ins"><div class="c"><div class="sh"><h2>Industry insights</h2></div>
+<div class="ins"><div class="g">
+<div class="ib"><span class="t">Report</span><h3>Hiring Trends 2025</h3><p>In-demand skills and market dynamics across Vietnam.</p><a class="btn m" href="#">Download</a></div>
+<div class="ib"><span class="t">Guide</span><h3>Salary Guide</h3><p>Average salaries for professional and technical roles.</p><a class="btn m" href="#">Download</a></div>
+<div class="ib"><span class="t">Blog</span><h3>Work and Smile</h3><p>Stories about careers that fit who you are.</p><a class="btn m" href="#">Read</a></div>
+</div></div></div></section>
+
+<section><div class="c"><div class="cta"><div><h2>Let's find your fit.</h2><p>Talk to our team about your next role or your next hire.</p></div><a class="btn d" href="#">Get in touch</a></div></div></section>
+
+<footer><div class="c"><div class="g">
+<div><div class="logo" style="color:#fff"><svg width="42" height="42"><use href="#icw"/></svg><div class="lg">FIX <i>Talent</i></div></div><p style="line-height:1.6">Where great people meet great work.</p></div>
+<div><h4>Job seekers</h4><ul><li>Find a job</li><li>Salary guide</li><li>Career advice</li></ul></div>
+<div><h4>Employers</h4><ul><li>Recruitment</li><li>Staffing</li><li>HR solutions</li></ul></div>
+<div><h4>Company</h4><ul><li>About us</li><li>Insights</li><li>Contact</li></ul></div>
+</div><div class="copy">© FIX Talent. All rights reserved.</div></div></footer>
+</body></html>

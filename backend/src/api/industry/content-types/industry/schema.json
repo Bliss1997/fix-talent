@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industry",
+    "pluralName": "industries",
+    "displayName": "Industry"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "slug": {
+      "targetField": "name",
+      "required": true,
+      "type": "uid"
+    },
+    "description": {
+      "type": "text"
+    },
+    "jobs": {
+      "target": "api::job.job",
+      "relation": "oneToMany",
+      "mappedBy": "industry",
+      "type": "relation"
+    }
+  }
+}

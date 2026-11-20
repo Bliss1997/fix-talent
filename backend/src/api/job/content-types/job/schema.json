@@ -1,0 +1,124 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "targetField": "title",
+      "required": true,
+      "type": "uid"
+    },
+    "company": {
+      "target": "api::company.company",
+      "relation": "manyToOne",
+      "inversedBy": "jobs",
+      "type": "relation"
+    },
+    "industry": {
+      "target": "api::industry.industry",
+      "relation": "manyToOne",
+      "inversedBy": "jobs",
+      "type": "relation"
+    },
+    "location": {
+      "enum": [
+        "Ho Chi Minh City",
+        "Ha Noi",
+        "Da Nang",
+        "Other"
+      ],
+      "required": true,
+      "type": "enumeration"
+    },
+    "workMode": {
+      "enum": [
+        "On-site",
+        "Hybrid",
+        "Remote"
+      ],
+      "default": "On-site",
+      "required": true,
+      "type": "enumeration"
+    },
+    "employmentType": {
+      "enum": [
+        "Full-time",
+        "Part-time",
+        "Contract",
+        "Internship"
+      ],
+      "default": "Full-time",
+      "required": true,
+      "type": "enumeration"
+    },
+    "level": {
+      "enum": [
+        "Intern",
+        "Junior",
+        "Mid",
+        "Senior",
+        "Lead",
+        "Manager"
+      ],
+      "type": "enumeration"
+    },
+    "salaryMin": {
+      "type": "integer",
+      "min": 0
+    },
+    "salaryMax": {
+      "type": "integer",
+      "min": 0
+    },
+    "salaryCurrency": {
+      "enum": [
+        "VND",
+        "USD"
+      ],
+      "default": "VND",
+      "type": "enumeration"
+    },
+    "salaryNegotiable": {
+      "type": "boolean",
+      "default": false
+    },
+    "summary": {
+      "maxLength": 300,
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "requirements": {
+      "type": "blocks"
+    },
+    "benefits": {
+      "type": "blocks"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "applications": {
+      "target": "api::application.application",
+      "relation": "oneToMany",
+      "mappedBy": "job",
+      "type": "relation"
+    }
+  }
+}

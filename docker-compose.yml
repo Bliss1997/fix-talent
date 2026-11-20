@@ -1,0 +1,18 @@
+# Optional: PostgreSQL in Docker (option B).
+# Uses port 5433 so it does not clash with the local PostgreSQL service on 5432.
+# Start:  docker compose up -d
+# To point Strapi here, set DATABASE_PORT=5433 and the matching password in backend/.env
+services:
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: fixtalent
+      POSTGRES_USER: fixtalent
+      POSTGRES_PASSWORD: ${DOCKER_DB_PASSWORD:?Set DOCKER_DB_PASSWORD in a .env file next to this one}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

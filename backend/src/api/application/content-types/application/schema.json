@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "singularName": "application",
+    "pluralName": "applications",
+    "displayName": "Application"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "fullName": {
+      "maxLength": 120,
+      "required": true,
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "maxLength": 30,
+      "type": "string"
+    },
+    "linkedin": {
+      "maxLength": 300,
+      "type": "string"
+    },
+    "coverLetter": {
+      "maxLength": 5000,
+      "type": "text"
+    },
+    "cv": {
+      "allowedTypes": [
+        "files"
+      ],
+      "multiple": false,
+      "type": "media"
+    },
+    "job": {
+      "target": "api::job.job",
+      "relation": "manyToOne",
+      "inversedBy": "applications",
+      "type": "relation"
+    },
+    "status": {
+      "private": true,
+      "enum": [
+        "New",
+        "Screening",
+        "Interview",
+        "Offer",
+        "Hired",
+        "Rejected"
+      ],
+      "default": "New",
+      "type": "enumeration"
+    },
+    "notes": {
+      "private": true,
+      "type": "text"
+    },
+    "consent": {
+      "default": false,
+      "required": true,
+      "type": "boolean"
+    }
+  }
+}

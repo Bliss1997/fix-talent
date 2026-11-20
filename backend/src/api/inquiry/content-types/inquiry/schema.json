@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inquiries",
+  "info": { "singularName": "inquiry", "pluralName": "inquiries", "displayName": "Inquiry" },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "companyName": { "type": "string", "required": true, "maxLength": 160 },
+    "contactName": { "type": "string", "required": true, "maxLength": 120 },
+    "email": { "type": "email", "required": true },
+    "phone": { "type": "string", "maxLength": 30 },
+    "service": { "type": "enumeration", "enum": ["Recruitment", "Staffing", "HR Solutions", "Not sure yet"], "default": "Recruitment", "required": true },
+    "message": { "type": "text", "required": true, "maxLength": 3000 },
+    "consent": { "type": "boolean", "required": true, "default": false },
+    "status": { "type": "enumeration", "enum": ["New", "Contacted", "In progress", "Won", "Closed"], "default": "New", "private": true },
+    "notes": { "type": "text", "private": true }
+  }
+}

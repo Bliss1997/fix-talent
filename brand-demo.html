@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>FIX Talent – Brand Demo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0F4C5C;--coral:#FF6B57;--peach:#FFB4A6;--cream:#FFF4EF;--ink:#1B2B30}
+*{box-sizing:border-box}body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,.logo{font-family:Sora,sans-serif}a{color:inherit;text-decoration:none}
+.c{max-width:1080px;margin:auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px}.logo i{font-style:normal;font-weight:500}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;font-weight:600}
+.pri{background:var(--coral);color:#fff}.sec{background:#fff;color:var(--teal);border:2px solid var(--teal)}
+.hero{background:var(--teal);color:#fff;border-radius:0 0 40px 40px}
+.hero .c{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding-bottom:70px}
+.hero nav{color:#fff}.hero h1{font-size:50px;line-height:1.1;margin:50px 0 16px}.hero h1 span{color:var(--peach)}
+.hero p{font-size:18px;opacity:.85;max-width:460px;line-height:1.5}
+.search{background:#fff;border-radius:16px;padding:8px;display:flex;gap:8px;margin-top:28px;max-width:500px}
+.search span{flex:1;padding:12px 14px;color:#777}
+.panel{background:var(--cream);color:var(--ink);border-radius:24px;padding:22px;margin-top:40px}
+.match{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:12px;margin-bottom:10px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--peach);display:grid;place-items:center;font-weight:700;color:var(--teal)}
+.pill{margin-left:auto;background:var(--coral);color:#fff;border-radius:99px;padding:4px 10px;font-size:13px;font-weight:600}
+.match small{color:#667;display:block}
+section{padding:70px 0}h2{font-size:32px;margin:0 0 8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.stats b{font-family:Sora;font-size:42px;color:var(--teal);display:block}
+.jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.job{background:var(--cream);border-radius:18px;padding:22px}.job h3{margin:12px 0 4px;font-size:18px}
+.tag{display:inline-block;background:#fff;color:var(--teal);border-radius:99px;padding:4px 12px;font-size:13px;font-weight:600}
+.cta{background:var(--coral);color:#fff;border-radius:28px;padding:50px;text-align:center}
+.cta .btn{background:var(--teal);color:#fff;margin-top:14px}
+footer{background:var(--ink);color:#fff;padding:30px 0;margin-top:70px;font-size:14px}
+.apps{background:var(--cream)}.apps .row{display:flex;gap:30px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.card{width:340px;height:196px;border-radius:14px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 24px #0002}
+.avatar{width:120px;height:120px;border-radius:50%;background:var(--teal);display:grid;place-items:center;box-shadow:0 8px 24px #0002}
+@media(max-width:760px){.hero .c,.jobs,.stats{grid-template-columns:1fr}nav ul{display:none}.hero h1{font-size:36px}}
+</style></head><body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="ic-w" viewBox="0 0 64 64"><circle cx="32" cy="12" r="9" fill="#FF6B57"/><path d="M8 62V50a24 24 0 0 1 48 0v12z" fill="#fff"/><path d="M26 56V40M26 40h16M26 49h11" stroke="#0F4C5C" stroke-width="6" stroke-linecap="round" fill="none"/></symbol>
+<symbol id="ic-t" viewBox="0 0 64 64"><circle cx="32" cy="12" r="9" fill="#FF6B57"/><path d="M8 62V50a24 24 0 0 1 48 0v12z" fill="#0F4C5C"/><path d="M26 56V40M26 40h16M26 49h11" stroke="#FFF4EF" stroke-width="6" stroke-linecap="round" fill="none"/></symbol>
+<symbol id="ic-c" viewBox="0 0 64 64"><circle cx="32" cy="12" r="9" fill="#0F4C5C"/><path d="M8 62V50a24 24 0 0 1 48 0v12z" fill="#fff"/><path d="M26 56V40M26 40h16M26 49h11" stroke="#FF6B57" stroke-width="6" stroke-linecap="round" fill="none"/></symbol>
+</defs></svg>
+
+<header class="hero"><div class="c">
+<div>
+<nav><a class="logo" href="#"><svg width="38" height="38"><use href="#ic-w"/></svg><span>FIX <i>Talent</i></span></a></nav>
+<h1>Where great people meet <span>great work.</span></h1>
+<p>We match skilled professionals with teams that value them. Faster hiring, better fits, fewer surprises.</p>
+<div class="search"><span>Job title or skill…</span><a class="btn pri" href="#">Find jobs</a></div>
+</div>
+<div class="panel">
+<b style="font-family:Sora">New matches today</b>
+<div class="match" style="margin-top:14px"><div class="av">LN</div><div><b>Linh Nguyen</b><small>Senior Frontend Developer</small></div><span class="pill">96%</span></div>
+<div class="match"><div class="av">MT</div><div><b>Minh Tran</b><small>Product Designer</small></div><span class="pill">92%</span></div>
+<div class="match" style="margin:0"><div class="av">AP</div><div><b>An Pham</b><small>Data Analyst</small></div><span class="pill">89%</span></div>
+</div>
+<nav style="grid-column:1/-1;display:none"></nav>
+</div></header>
+
+<section><div class="c"><div class="stats">
+<div><b>12,000+</b>vetted candidates</div><div><b>480</b>partner companies</div><div><b>14 days</b>average time to hire</div></div></div></section>
+
+<section style="padding-top:0"><div class="c"><h2>Featured roles</h2><span style="color:#667">Hand-picked openings from companies we trust.</span>
+<div class="jobs">
+<div class="job"><span class="tag">Remote</span><h3>Backend Engineer</h3><span style="color:#667">Fintech · Ho Chi Minh City</span><p><a class="btn pri" href="#">View role</a></p></div>
+<div class="job"><span class="tag">Hybrid</span><h3>UX Designer</h3><span style="color:#667">E-commerce · Ha Noi</span><p><a class="btn pri" href="#">View role</a></p></div>
+<div class="job"><span class="tag">On-site</span><h3>QA Lead</h3><span style="color:#667">Software · Da Nang</span><p><a class="btn pri" href="#">View role</a></p></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="c"><div class="cta"><h2>Ready to build your team?</h2><p>Tell us the role. We'll send shortlisted candidates in days, not weeks.</p><a class="btn" href="#">Post a role</a></div></div></section>
+
+<section class="apps"><div class="c"><h2>Brand in use</h2><span style="color:#667">Business cards and social avatar.</span>
+<div class="row">
+<div class="card" style="background:var(--teal);color:#fff"><div class="logo"><svg width="34" height="34"><use href="#ic-w"/></svg><span>FIX <i>Talent</i></span></div><div style="font-size:13px;line-height:1.5"><b style="font-family:Sora;font-size:15px">Linh Nguyen</b><br>Talent Partner<br>linh@fixtalent.com · +84 000 000 000</div></div>
+<div class="card" style="background:var(--cream);color:var(--teal)"><div class="logo"><svg width="34" height="34"><use href="#ic-t"/></svg><span>FIX <i>Talent</i></span></div><div style="font-size:13px;line-height:1.5"><b style="font-family:Sora;font-size:15px">fixtalent.com</b><br>Where great people meet great work.</div></div>
+<div class="card" style="background:var(--coral);color:#fff"><div class="logo"><svg width="34" height="34"><use href="#ic-c"/></svg><span>FIX <i>Talent</i></span></div><div style="font-size:13px">We're hiring.<br><b style="font-family:Sora;font-size:15px">Join the team.</b></div></div>
+<div class="avatar"><svg width="76" height="76"><use href="#ic-w"/></svg></div>
+</div></div></section>
+
+<footer><div class="c" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><span>© FIX Talent</span><span>Where great people meet great work.</span></div></footer>
+</body></html>
